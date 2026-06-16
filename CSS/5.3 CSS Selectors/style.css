@@ -1,0 +1,25 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+p{
+    color: red;
+}
+
+.note{
+    font-size: 20px;
+}
+#id-selector-demo{
+    color:green;
+}
+
+li[value="4"] {
+  color: blue;
+}
+
+/* TODO 5: Set all elements to have "font-family: sans-serif;" */
+* {
+  text-align: center;
+}
