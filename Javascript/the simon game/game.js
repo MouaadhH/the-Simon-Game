@@ -41,13 +41,11 @@ function checkAnswer(currentLevel) {
 
         // Check if user has completed the full sequence
         if (userClickedPattern.length === gamePattern.length) {
-            // Wait 1 second then show next sequence
+            // Wait 1 second then show next sequence AND reset user pattern
             setTimeout(function() {
                 nextSequence();
+                userClickedPattern = []; // ✅ Fixed: reset inside setTimeout
             }, 1000);
-
-            // Reset user pattern for next level
-            userClickedPattern = [];
         }
 
     } else {
@@ -97,5 +95,6 @@ function animatePress(currentColour) {
 function startOver() {
     level = 0;
     gamePattern = [];
+    userClickedPattern = []; // ✅ Also reset userClickedPattern on game over
     started = false;
 }
